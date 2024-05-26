@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="animalform.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="animalForm">
+           <div class="info">
+            <div>
+                <div class="form-group">
+                    <label for="tag"><strong>Tag</strong></label>
+                    <input type="text" class="form-control" id="tag" aria-describedby="emailHelp" placeholder="Enter tag">
+                  </div>
+                  <div class="form-group">
+                    <label for="sex"><strong>Sex</strong></label>
+                    <input type="text" class="form-control" id="sex" placeholder="Enter Sex">
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="color"><strong>Color</strong></label>
+                      <input type="text" class="form-control" id="color" placeholder="Enter Color">
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="kind"><strong>Kind</strong></label>
+                      <input type="text" class="form-control" id="kind" placeholder="Enter Kind">
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="specie"><strong>Specie</strong></label>
+                      <input type="text" class="form-control" id="specie" placeholder="Enter specie">
+                  </div>
+      
+                  <div class="form-group">
+                      <label for="Born_Date"><strong>Born Date</strong></label>
+                      <input type="date" class="form-control" id="Born_Date" placeholder="Enter Born Date (YYYY-MM-DD)">
+                  </div>
+               </div>
+    
+           
+    
+              <div>
+    
+                <div class="form-group">
+                    <label for="Dying_Date"><strong>Dying Date</strong></label>
+                    <input type="date" class="form-control" id="Dying_Date" placeholder="Enter Dying Date (YYYY-MM-DD)">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Calfying_Date"><strong>Calfing Date</strong></label>
+                    <input type="date" class="form-control" id="Calfying_Date" placeholder="Enter Calf ing Date (YYYY-MM-DD)">
+                </div>
+    
+                <div class="form-group">
+                    <label for="No_Of_Treatments"><strong>No of Treatments</strong></label>
+                    <input type="text" class="form-control" id="No_Of_Treatments" placeholder="Enter No of Treatments">
+                </div>
+    
+                  <div class="form-group">
+                    <label for="Parent_Tag"><strong>Parent Tag</strong></label>
+                    <input type="text" class="form-control" id="Parent_Tag" placeholder="Enter Parent Tag">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Is_Bought"><strong>Is Bought</strong></label>
+                    <input type="text" class="form-control" id="Is_Bought" placeholder="Enter Is Bought">
+                </div>
+    
+                <div class="form-group">
+                    <label for="Food_group"><strong>Food group</strong></label>
+                    <input type="text" class="form-control" id="Food_group" placeholder="Enter Food group">
+                </div>
+    
+              </div>
+           </div>
+        
+            <button type="submit" class="btn  sbtn">Submit</button>
+            <button type="button" class="btn sbtn" id="getBtn">Get Data</button>
+            <button type="button" class="btn sbtn" id="upBtn">Update</button>
+            <button type="button" class="btn sbtn" id="delete">delete Data</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="animalform.js"></script>
+    
+</body>
+</html>

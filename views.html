@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Views</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="views.css">
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <ul>
+                <li id="onel"><a href="project.html"><i class="fa fa-angle-left fa-3x" aria-hidden="true" style="color: #6f4713a5; padding: 30px;"></i></a></li>
+                <li style="text-align: center;"><h1>VIEWS</h1></li>
+            </ul>
+            
+        </div>
+        <div class="main1">
+            <div class="card" style="width: 18rem;">
+              <img src="images/sheep.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Animal Details View</h5>
+                <p class="card-text">This view combines information from the Animal table and its related tables for easier access to animal details.
+                  .</p>
+                <a href="#" class="btn " id="adbutton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="adModal" tabindex="-1" role="dialog" aria-labelledby="adModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="adModalLabel " style="color: #6f4713;">Animal Details</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Tag</th>
+                            <th>Sex</th>
+                            <th>Color</th>
+                            <th>Kind</th>
+                            <th>Specie</th>
+                            <th>Born Date</th>
+                            <th>Dying Date</th>
+                            <th>Calfing Date</th>
+                            <th>Number Of Treatments</th>
+                            <th>Parent Tag</th>
+                            <th>Buying Price</th>
+                            <th>Buying Date</th>
+                            <th>Currency</th>
+                            <th>Food Group</th>
+                          </tr>
+                        </thead>
+                        <tbody id="adBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/treatment.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Animal Treatment View</h5>
+                <p class="card-text">This view provides a summary of treatments given to each animal, including the total quantity of medicine used.
+                </p>
+                <a href="#" class="btn " id="atsbutton">View</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="atsModal" tabindex="-1" role="dialog" aria-labelledby="atsModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="atsModalLabel " style="color: #6f4713;">Animal Treatment Summary</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Animal Tag</th>
+                            <th>Specie</th>
+                            <th>Color</th>
+                            <th>Number Of Treatments</th>
+                            <th>Total Medicine Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody id="atsBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/production.jpg" class="card-img-top  custom-img-height" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Animal Production View</h5>
+                <p class="card-text">This view summarizes the production output of animals, including both milk and meat production.</p>
+                <a href="#" class="btn  " id="apbutton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="apModal" tabindex="-1" role="dialog" aria-labelledby="apModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="apModalLabel " style="color: #6f4713;">Animal Production Summary</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Animal Tag</th>
+                            <th>Specie</th>
+                            <th>Kind</th>
+                            <th>Total Milk Production</th>
+                            <th>Total Meat Production</th>
+                          </tr>
+                        </thead>
+                        <tbody id="apBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/expense.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Expense Analysis</h5>
+                <p class="card-text "  >This view provides insights into expenses incurred.</p>
+                <a href="#" class="btn  mt-5" id="eabutton" >view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="eaModal" tabindex="-1" role="dialog" aria-labelledby="eaModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="eaModalLabel " style="color: #6f4713;">Expense Analysis</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Expense Type</th>
+                            <th>Quantity</th>
+                            <th>Date</th>
+                            <th>Miscellaneous Costs</th>
+                            <th>Remarks</th>
+                            <th>Item Name</th>
+                          </tr>
+                        </thead>
+                        <tbody id="eaBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/sales.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Sales Analysis</h5>
+                <p class="card-text">This view presents insights into sales transactions.</p>
+                <a href="#" class="btn " id="sabutton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="saModal" tabindex="-1" role="dialog" aria-labelledby="saModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="saModalLabel " style="color: #6f4713;">Sales Analysis</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Production ID</th>
+                            <th>Production Type</th>
+                            <th>Quantity</th>
+                            <th>Sales Date</th>
+                          </tr>
+                        </thead>
+                        <tbody id="saBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/forage.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Forage Cost/kg View</h5>
+                <p class="card-text">This view calculates the cost per kg for forage items.</p>
+                <a href="#" class="btn  " id="fcbutton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="fcModal" tabindex="-1" role="dialog" aria-labelledby="fcModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="fcModalLabel " style="color: #6f4713;">Forage Cost Per Kg</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Unit</th>
+                            <th>Cost per Kg</th>
+                          </tr>
+                        </thead>
+                        <tbody id="fcBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/inventory.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Forage Inventory</h5>
+                <p class="card-text">This view shows the current inventory of forage items.</p>
+                <a href="#" class="btn " id="fibutton">view</a>
+              </div>
+            </div>
+            <div class="modal fade" id="fiModal" tabindex="-1" role="dialog" aria-labelledby="fiModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="fiModalLabel " style="color: #6f4713;">Forage Inventory</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Forage Name</th>
+                            <th>Total Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody id="fiBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/foodgroup.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Food Group Analysis</h5>
+                <p class="card-text">This view analyzes the distribution of animals based on food groups</p>
+                <a href="#" class="btn " id="fgbutton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="fgModal" tabindex="-1" role="dialog" aria-labelledby="fgModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="fgModalLabel " style="color: #6f4713;">Food Group Analysis</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Group Name</th>
+                            <th>Number of Animals</th>
+                          </tr>
+                        </thead>
+                        <tbody id="fgBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/trend.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Monthly Expense Trend View</h5>
+                <p class="card-text">This view presents a monthly trend of expenses, including item costs and miscellaneous expenses.
+    
+                </p>
+                <a href="#" class="btn " id="metbutton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="metModal" tabindex="-1" role="dialog" aria-labelledby="metModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="metModalLabel " style="color: #6f4713;">Monthly Expense Trend</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Expense Month</th>
+                            <th>Expense Year</th>
+                            <th>Total Expense</th>
+                          </tr>
+                        </thead>
+                        <tbody id="metBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+    
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/stock.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Medicine Stock View</h5>
+                <p class="card-text">This view related to medicine that provides information about the medicine stock levels and their expiry dates.</p>
+                <a href="#" class="btn " id="mButton">view</a>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="stockModal" tabindex="-1" role="dialog" aria-labelledby="stockModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="max-width: 80%;">
+                  <div class="modal-content" style="background-color:#ddcbb4;">
+                    <div class="modal-header">
+                      <h3 class="modal-title " id="stockModalLabel " style="color: #6f4713;">Medicine Stock</h3>
+                     
+                      
+                    </div>
+                    <div class="modal-body">
+                      <table class="table" style="color: #684415;">
+                        <thead>
+                          <tr>
+                            <th>Medicine ID</th>
+                            <th>Medicine Name</th>
+                            <th>Current Stock</th>
+                            <th>Expiry Date</th>
+                          </tr>
+                        </thead>
+                        <tbody id="stockBody">
+                          <!-- Data will be loaded here dynamically -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+    
+            <div class="card" style="width: 18rem;">
+              <img src="images/suppliment.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Supplement Stock View</h5>
+                <p class="card-text">This view related to supplements provides information about the supplement stock levels and their purchase details.</p>
+                <a href="#" class="btn " id="viewButton">View</a>
+              </div>
+            </div>
+            
+            <div class="modal fade" id="supplimentModal" tabindex="-1" role="dialog" aria-labelledby="supplimentModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document" style="max-width: 80%;">
+                <div class="modal-content" style="background-color:#ddcbb4;">
+                  <div class="modal-header">
+                    <h3 class="modal-title " id="supplimentModalLabel " style="color: #6f4713;">Supplement Stock</h3>
+                   
+                    
+                  </div>
+                  <div class="modal-body">
+                    <table class="table" style="color: #684415;">
+                      <thead>
+                        <tr>
+                          <th>Suppliment ID</th>
+                          <th>Suppliment Name</th>
+                          <th>Current Stock</th>
+                          <th>Purchase Date</th>
+                          <th>Purchase Price</th>
+                        </tr>
+                      </thead>
+                      <tbody id="supplimentBody">
+                        <!-- Data will be loaded here dynamically -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+       
+          </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="app.js"></script>
+<script src="views.js"></script>
+<script src="animations.js"></script>
+</html>
